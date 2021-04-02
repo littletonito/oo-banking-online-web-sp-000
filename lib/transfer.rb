@@ -1,6 +1,6 @@
 class Transfer
 
-  attr_accessor  :status 
+  attr_accessor  :status
   attr_reader :sender, :receiver, :amount
 
   def initialize(sender, receiver, amount)
@@ -11,7 +11,11 @@ class Transfer
   end
 
   def valid?
-    sender.valid? && receiver.valid?
+    if sender.valid? && receiver.valid?
+      true
+    else
+      false
+    end
   end
 
   def execute_transaction
