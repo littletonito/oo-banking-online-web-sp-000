@@ -12,9 +12,9 @@ class Transfer
 
   def valid?
     if sender.valid? && receiver.valid?
-      true
-    else
       false
+    else
+      true
     end
   end
 
@@ -47,7 +47,7 @@ end
 
 
 
-# 
+#
 #
 # class Transfer
 #   attr_reader :amount, :sender, :receiver
